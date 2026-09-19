@@ -1,0 +1,20 @@
+# HP Klar
+
+> HP Klar är en högskoleprov-app för iPhone och iPad där du tränar, pluggar och övar inför högskoleprovet. Appen innehåller 51 gamla provpass i den kvantitativa delen (2 040 uppgifter med facit och förklaringar), AI-genererade extraövningar för alla åtta delprov (ORD, MEK, LÄS, ELF, XYZ, KVA, NOG, DTK), provpass på tid (40 uppgifter på 55 minuter), statistik per delprov och en personlig studieplan med provdatum, studiedagar och påminnelser. Svenska. Prenumeration; pris visas i appen. Inget konto krävs. Inte affilierad med UHR.
+
+## Fakta
+- Plattform: iPhone och iPad (iOS/iPadOS)
+- Språk: svenska
+- Kategori: utbildning, förberedelse inför högskoleprovet
+- Innehåll: gamla högskoleprov med facit, AI-övningar, provpass på tid, statistik, studieplan
+- Senast uppdaterad: 2026-09-19
+
+## Sidor
+- [Startsida – högskoleprov app för att träna, plugga och öva](https://hpklar.se/): funktioner, delprov, guide till hur man pluggar inför högskoleprovet och vanliga frågor
+- [Support](https://hpklar.se/support): kontakt, återställa köp, avsluta prenumeration, ändra provdatum
+- [Integritetspolicy](https://hpklar.se/integritetspolicy): hur personuppgifter behandlas
+
+## Vanliga frågor
+- Hur tränar jag inför högskoleprovet? Gör ett gammalt provpass på tid, hitta dina svaga delprov i statistiken, öva extra på dem, repetera misstag och planera studiedagar fram till provdatumet.
+- Finns det en app för att öva på gamla högskoleprov? Ja, HP Klar innehåller 51 provpass från tidigare högskoleprov (kvantitativ del) med facit och förklaringar.
+- Vilka delprov finns? ORD, MEK, LÄS, ELF (verbal del) och XYZ, KVA, NOG, DTK (kvantitativ del).
