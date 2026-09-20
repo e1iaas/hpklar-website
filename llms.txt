@@ -7,10 +7,11 @@
 - Språk: svenska
 - Kategori: utbildning, förberedelse inför högskoleprovet
 - Innehåll: gamla högskoleprov med facit, AI-övningar, provpass på tid, statistik, studieplan
-- Senast uppdaterad: 2026-09-19
+- Senast uppdaterad: 2026-09-20
 
 ## Sidor
 - [Startsida – högskoleprov app för att träna, plugga och öva](https://hpklar.se/): funktioner, delprov, guide till hur man pluggar inför högskoleprovet och vanliga frågor
+- [Gratis högskoleprovet-test](https://hpklar.se/hogskoleprovet-test): gratis test med 10 riktiga uppgifter ur högskoleprovet 19 oktober 2025 (ORD, XYZ, KVA, NOG), med UHR:s facit, förklaringar och källhänvisning till studera.nu; cirka 10 minuter, inget konto
 - [Support](https://hpklar.se/support): kontakt, återställa köp, avsluta prenumeration, ändra provdatum
 - [Integritetspolicy](https://hpklar.se/integritetspolicy): hur personuppgifter behandlas
 
