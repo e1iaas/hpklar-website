@@ -316,3 +316,48 @@ button.btn:disabled{opacity:.45;cursor:not-allowed}
   .facts.tiles{grid-template-columns:1fr 1fr}
   .result .cta-row .btn{width:100%}
 }
+
+/* ---------- studieplan ---------- */
+.planform{display:grid;gap:20px;max-width:560px}
+.field label:not(.chk),legend{display:block;font-weight:800;color:var(--navy);margin-bottom:8px;font-size:1rem}
+.field .opt{font-weight:500;color:var(--muted);font-size:.9rem}
+.field input[type=date],.field select{width:100%;padding:13px 14px;border:2px solid var(--line);border-radius:12px;font-size:1.05rem;font-family:inherit;color:var(--ink);background:#fff}
+.field input[type=date]:focus-visible,.field select:focus-visible{outline:3px solid var(--gold-bright);outline-offset:2px;border-color:var(--navy)}
+fieldset.field{border:0;padding:0;margin:0}
+.chkgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.chk{display:flex;align-items:center;gap:10px;padding:11px 14px;border:2px solid var(--line);border-radius:12px;margin:0;cursor:pointer;font-weight:600;font-size:.98rem}
+.chk input{position:absolute;opacity:0;pointer-events:none}
+.chk .dot{width:20px;height:20px;border-radius:6px;border:2px solid var(--line);flex:0 0 auto;display:grid;place-items:center;margin:0;padding:0;background:none}
+.chk .dot::after{content:"";width:11px;height:11px;border-radius:3px;background:var(--navy);transform:scale(0);transition:transform .1s}
+.chk:has(input:checked){border-color:var(--navy);background:#F3F5FC}
+.chk:has(input:checked) .dot{border-color:var(--navy)}
+.chk:has(input:checked) .dot::after{transform:scale(1)}
+.chk:has(input:focus-visible){outline:3px solid var(--gold-bright);outline-offset:2px}
+.formerr{color:#A0231B;font-weight:700;margin:0}
+.plan{margin-top:24px}
+.plan .score{font-family:var(--serif);font-weight:700;color:var(--navy);margin:0 0 .1em;line-height:1}
+.plan .score span{font-size:3.4rem}
+.plan .score small{font-size:1.1rem;color:var(--muted);font-weight:700;margin-left:8px}
+.plan .res-msg{font-size:1.1rem;max-width:56ch}
+.rhythm{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:14px 0 24px}
+.phases{list-style:none;padding:0;margin:0;display:grid;gap:16px}
+.phases li{border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.phases h3{margin:0 0 8px;font-size:1.1rem}
+.phases ul{margin:0;padding-left:1.2em}
+.phases li+li{position:relative}
+.weaklist{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:10px}
+.weaklist li{background:var(--cream);border-radius:12px;padding:12px 16px}
+.plan .note{color:var(--muted)}
+.plan .cta-row{margin-top:22px}
+
+@media(max-width:719px){
+  .chkgrid{grid-template-columns:1fr}
+  .plan .score span{font-size:2.8rem}
+}
+
+@media print{
+  .site-header,.site-footer,.noprint,.chips,.lead,.crumbs,.page{display:none!important}
+  body,.test-hero{background:#fff}
+  .shell,.plan{box-shadow:none;border:0;padding:0}
+  a[href]::after{content:""}
+}
