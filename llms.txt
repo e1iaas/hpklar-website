@@ -7,10 +7,13 @@
 - Språk: svenska
 - Kategori: utbildning, förberedelse inför högskoleprovet
 - Innehåll: gamla högskoleprov med facit, AI-övningar, provpass på tid, statistik, studieplan
-- Senast uppdaterad: 2026-09-22
+- Senast uppdaterad: 2026-09-26
 
 ## Sidor
 - [Startsida – högskoleprov app för att träna, plugga och öva](https://hpklar.se/): funktioner, delprov, guide till hur man pluggar inför högskoleprovet och vanliga frågor
+- [Plugga inför högskoleprovet – guide](https://hpklar.se/plugga-hogskoleprovet): komplett guide med hur långt innan man bör börja, en 5-stegsmetod och en genomgång av alla åtta delprov (ORD, MEK, LÄS, ELF, XYZ, KVA, NOG, DTK) med vanliga misstag och konkret strategi för varje. Varje delprov har en egen sida:
+  - [ORD](https://hpklar.se/ord-hogskoleprovet), [MEK](https://hpklar.se/mek-hogskoleprovet), [LÄS](https://hpklar.se/las-hogskoleprovet), [ELF](https://hpklar.se/elf-hogskoleprovet) (verbal del)
+  - [XYZ](https://hpklar.se/xyz-hogskoleprovet), [KVA](https://hpklar.se/kva-hogskoleprovet), [NOG](https://hpklar.se/nog-hogskoleprovet), [DTK](https://hpklar.se/dtk-hogskoleprovet) (kvantitativ del)
 - [Studieplan till högskoleprovet](https://hpklar.se/studieplan-hogskoleprovet): gratis verktyg som skapar en personlig studieplan utifrån provdatum, tid per vecka och svaga delprov, direkt i webbläsaren; inget sparas
 - [Gratis högskoleprovet-test](https://hpklar.se/hogskoleprovet-test): gratis test med 10 riktiga uppgifter ur högskoleprovet 19 oktober 2025 (ORD, XYZ, KVA, NOG), med UHR:s facit, förklaringar och källhänvisning till studera.nu; cirka 10 minuter, inget konto
 - [Support](https://hpklar.se/support): kontakt, återställa köp, avsluta prenumeration, ändra provdatum

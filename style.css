@@ -361,3 +361,13 @@ fieldset.field{border:0;padding:0;margin:0}
   .shell,.plan{box-shadow:none;border:0;padding:0}
   a[href]::after{content:""}
 }
+
+/* ---------- delprov spoke pages ---------- */
+.delprovnav{margin:36px 0;padding:22px 24px;background:var(--cream);border:1px solid var(--line);border-radius:var(--radius)}
+.delprovnav h2{margin:0 0 14px;font-size:1.1rem}
+.delprovnav ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.delprovnav a{display:block;padding:9px 12px;border-radius:10px;background:#fff;border:1px solid var(--line);text-decoration:none;font-size:.92rem;color:var(--ink)}
+.delprovnav a:hover{border-color:var(--navy)}
+.delprovnav a[aria-current="page"]{background:var(--navy);border-color:var(--navy);color:#fff;font-weight:700}
+.delprovnav a strong{color:inherit}
+@media(max-width:719px){.delprovnav ul{grid-template-columns:repeat(2,1fr)}}

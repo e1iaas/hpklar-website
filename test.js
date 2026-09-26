@@ -76,4 +76,6 @@
   });
   form.addEventListener('submit',function(e){e.preventDefault()});
   if(location.hash==='#testet') begin();
+  var m=/^#fraga-(\d+)$/.exec(location.hash);
+  if(m){ begin(); var idx=Math.min(Math.max(parseInt(m[1],10)-1,0),N-1); show(idx); }
 })();
