@@ -25,6 +25,18 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://apphpklar.se/hogskoleprovet-app</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://apphpklar.se/hogskoleprovet-datum</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://apphpklar.se/ord-hogskoleprovet</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>

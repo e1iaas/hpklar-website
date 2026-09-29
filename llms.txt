@@ -7,13 +7,15 @@
 - Språk: svenska
 - Kategori: utbildning, förberedelse inför högskoleprovet
 - Innehåll: gamla högskoleprov med facit, AI-övningar, provpass på tid, statistik, studieplan
-- Senast uppdaterad: 2026-09-26
+- Senast uppdaterad: 2026-09-29
 
 ## Sidor
 - [Startsida – högskoleprov app för att träna, plugga och öva](https://apphpklar.se/): funktioner, delprov, guide till hur man pluggar inför högskoleprovet och vanliga frågor
 - [Plugga inför högskoleprovet – guide](https://apphpklar.se/plugga-hogskoleprovet): komplett guide med hur långt innan man bör börja, en 5-stegsmetod och en genomgång av alla åtta delprov (ORD, MEK, LÄS, ELF, XYZ, KVA, NOG, DTK) med vanliga misstag och konkret strategi för varje. Varje delprov har en egen sida:
   - [ORD](https://apphpklar.se/ord-hogskoleprovet), [MEK](https://apphpklar.se/mek-hogskoleprovet), [LÄS](https://apphpklar.se/las-hogskoleprovet), [ELF](https://apphpklar.se/elf-hogskoleprovet) (verbal del)
   - [XYZ](https://apphpklar.se/xyz-hogskoleprovet), [KVA](https://apphpklar.se/kva-hogskoleprovet), [NOG](https://apphpklar.se/nog-hogskoleprovet), [DTK](https://apphpklar.se/dtk-hogskoleprovet) (kvantitativ del)
+- [Högskoleprovet app – så väljer du](https://apphpklar.se/hogskoleprovet-app): checklista med sju kriterier för att välja en bra högskoleprovet-app (riktiga uppgifter med facit, tydlig AI/riktigt-skillnad, provsimulering, statistik per delprov, studieplan, pris, konto), och hur HP Klar uppfyller varje kriterium
+- [Högskoleprovet datum](https://apphpklar.se/hogskoleprovet-datum): nästa högskoleprov är söndagen den 18 oktober 2026 (källa: UHR/studera.nu); anmälan till det provtillfället är stängd
 - [Studieplan till högskoleprovet](https://apphpklar.se/studieplan-hogskoleprovet): gratis verktyg som skapar en personlig studieplan utifrån provdatum, tid per vecka och svaga delprov, direkt i webbläsaren; inget sparas
 - [Gratis högskoleprovet-test](https://apphpklar.se/hogskoleprovet-test): gratis test med 10 riktiga uppgifter ur högskoleprovet 19 oktober 2025 (ORD, XYZ, KVA, NOG), med UHR:s facit, förklaringar och källhänvisning till studera.nu; cirka 10 minuter, inget konto
 - [Support](https://apphpklar.se/support): kontakt, återställa köp, avsluta prenumeration, ändra provdatum
