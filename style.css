@@ -133,7 +133,8 @@ mark.todo{background:#FFF1B8;color:#5A4300;padding:0 4px;border-radius:4px}
 .site-footer a{color:#fff}
 .site-footer a:hover{color:var(--gold-bright)}
 .foot{display:grid;gap:32px}
-@media(min-width:800px){.foot{grid-template-columns:1.4fr 1fr 1fr}}
+@media(min-width:760px){.foot{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.foot{grid-template-columns:1.3fr 1fr 1fr 1fr}}
 .foot h2{font-family:var(--sans);font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:14px}
 .foot ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
 .legal{margin-top:36px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);font-size:.9rem;color:#A9B3D1}
@@ -371,3 +372,25 @@ fieldset.field{border:0;padding:0;margin:0}
 .delprovnav a[aria-current="page"]{background:var(--navy);border-color:var(--navy);color:#fff;font-weight:700}
 .delprovnav a strong{color:inherit}
 @media(max-width:719px){.delprovnav ul{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- table modes on phones ---------- */
+@media(max-width:719px){
+  /* key/value cards (2 columns: label + text) */
+  table.kv tr{display:block;padding:14px 16px}
+  table.kv td{display:block;padding:0}
+  table.kv td:nth-child(1){font-size:1.02rem;font-weight:800;color:var(--navy);margin:0 0 4px}
+  table.kv td:nth-child(2){font-size:1rem;font-weight:400;color:var(--ink);margin:0}
+  /* keep as a real table (e.g. schedules) */
+  table.keep{display:table;width:100%;min-width:0;border:1px solid var(--line);background:#fff}
+  table.keep thead{display:table-header-group;position:static}
+  table.keep tbody{display:table-row-group}
+  table.keep tr{display:table-row;background:none;border:0;border-radius:0;margin:0;padding:0}
+  table.keep th{display:table-cell;padding:10px 12px}
+  table.keep td{display:table-cell;padding:10px 12px;border-bottom:1px solid var(--line);margin:0;white-space:normal}
+  table.keep td:nth-child(n){font-size:.95rem;font-weight:400;color:var(--ink)}
+  table.keep td:nth-child(1){font-weight:700;color:var(--navy);white-space:nowrap}
+  table.keep td::before,table.keep td::after{content:none}
+  table.keep caption{display:table-caption}
+}
+.sched tr.pass td{background:#F3F5FC;font-weight:700}
+.sched tr.rest td{color:var(--muted)}
