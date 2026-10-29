@@ -2,9 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://apphpklar.se/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://apphpklar.se/gamla-hogskoleprov</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://apphpklar.se/provdagen-hogskoleprovet</loc>
@@ -14,7 +20,7 @@
   </url>
   <url>
     <loc>https://apphpklar.se/resultat-hogskoleprovet</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -32,7 +38,7 @@
   </url>
   <url>
     <loc>https://apphpklar.se/plugga-hogskoleprovet</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -44,7 +50,7 @@
   </url>
   <url>
     <loc>https://apphpklar.se/hogskoleprovet-datum</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -390,6 +390,7 @@ fieldset.field{border:0;padding:0;margin:0}
   table.keep td:nth-child(n){font-size:.95rem;font-weight:400;color:var(--ink)}
   table.keep td:nth-child(1){font-weight:700;color:var(--navy);white-space:nowrap}
   table.keep td::before,table.keep td::after{content:none}
+  table.keep td a{white-space:nowrap}
   table.keep caption{display:table-caption}
 }
 .sched tr.pass td{background:#F3F5FC;font-weight:700}

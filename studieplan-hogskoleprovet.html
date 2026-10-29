@@ -11,6 +11,7 @@
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#1C2B5E">
 <meta name="format-detection" content="telephone=no">
+<meta name="apple-itunes-app" content="app-id=6812707894">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="sv_SE">
 <meta property="og:site_name" content="HP Klar">
@@ -34,27 +35,161 @@
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
-    { "@type": "Organization", "@id": "https://apphpklar.se/#org", "name": "HP Klar", "url": "https://apphpklar.se/",
-      "logo": { "@type": "ImageObject", "url": "https://apphpklar.se/img/logo-512.png", "width": 512, "height": 512 },
-      "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "email": "eliastestdev@gmail.com", "availableLanguage": "Swedish", "url": "https://apphpklar.se/support" } },
-    { "@type": "WebSite", "@id": "https://apphpklar.se/#website", "url": "https://apphpklar.se/", "name": "HP Klar", "inLanguage": "sv-SE", "publisher": { "@id": "https://apphpklar.se/#org" } },
-    { "@type": "WebPage", "@id": "https://apphpklar.se/studieplan-hogskoleprovet#webpage", "url": "https://apphpklar.se/studieplan-hogskoleprovet", "name": "Studieplan till högskoleprovet – skapa din egen | HP Klar", "description": "Gör en gratis studieplan till högskoleprovet på under en minut. Ange provdatum, tid per vecka och svaga delprov – få en personlig plan direkt.", "inLanguage": "sv-SE",
-      "isPartOf": { "@id": "https://apphpklar.se/#website" }, "about": { "@id": "https://apphpklar.se/#app" },
-      "breadcrumb": { "@id": "https://apphpklar.se/studieplan-hogskoleprovet#breadcrumb" }, "dateModified": "2026-09-22",
-      "primaryImageOfPage": { "@type": "ImageObject", "url": "https://apphpklar.se/img/og-image.jpg" } },
-    { "@type": "BreadcrumbList", "@id": "https://apphpklar.se/studieplan-hogskoleprovet#breadcrumb", "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "HP Klar", "item": "https://apphpklar.se/" },
-      { "@type": "ListItem", "position": 2, "name": "Studieplan till högskoleprovet", "item": "https://apphpklar.se/studieplan-hogskoleprovet" } ] },
-    { "@type": "HowTo", "name": "Så skapar du en studieplan till högskoleprovet", "inLanguage": "sv",
+    {
+      "@type": "Organization",
+      "@id": "https://apphpklar.se/#org",
+      "name": "HP Klar",
+      "url": "https://apphpklar.se/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://apphpklar.se/img/logo-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "eliastestdev@gmail.com",
+        "availableLanguage": "Swedish",
+        "url": "https://apphpklar.se/support"
+      },
+      "sameAs": [
+        "https://apps.apple.com/se/app/h%C3%B6gskoleprovet-hp-klar/id6812707894"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://apphpklar.se/#website",
+      "url": "https://apphpklar.se/",
+      "name": "HP Klar",
+      "inLanguage": "sv-SE",
+      "publisher": {
+        "@id": "https://apphpklar.se/#org"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://apphpklar.se/studieplan-hogskoleprovet#webpage",
+      "url": "https://apphpklar.se/studieplan-hogskoleprovet",
+      "name": "Studieplan till högskoleprovet – skapa din egen | HP Klar",
+      "description": "Gör en gratis studieplan till högskoleprovet på under en minut. Ange provdatum, tid per vecka och svaga delprov – få en personlig plan direkt.",
+      "inLanguage": "sv-SE",
+      "isPartOf": {
+        "@id": "https://apphpklar.se/#website"
+      },
+      "about": {
+        "@id": "https://apphpklar.se/#app"
+      },
+      "breadcrumb": {
+        "@id": "https://apphpklar.se/studieplan-hogskoleprovet#breadcrumb"
+      },
+      "dateModified": "2026-09-22",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://apphpklar.se/img/og-image.jpg"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://apphpklar.se/studieplan-hogskoleprovet#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "HP Klar",
+          "item": "https://apphpklar.se/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Studieplan till högskoleprovet",
+          "item": "https://apphpklar.se/studieplan-hogskoleprovet"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Så skapar du en studieplan till högskoleprovet",
+      "inLanguage": "sv",
       "description": "Fyra steg för att få en personlig studieplan till högskoleprovet, direkt i webbläsaren.",
-      "totalTime": "PT1M", "estimatedCost": { "@type": "MonetaryAmount", "currency": "SEK", "value": "0" },
+      "totalTime": "PT1M",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "SEK",
+        "value": "0"
+      },
       "step": [
-        { "@type": "HowToStep", "position": 1, "name": "Ange ditt provdatum", "text": "Fyll i vilket datum du ska skriva högskoleprovet, så räknar verktyget ut hur många veckor du har kvar." },
-        { "@type": "HowToStep", "position": 2, "name": "Ange hur mycket tid du har", "text": "Välj ungefär hur många timmar i veckan du kan plugga." },
-        { "@type": "HowToStep", "position": 3, "name": "Välj dina svagaste delprov", "text": "Markera de delprov du vill fokusera extra på, om du redan vet vilka de är." },
-        { "@type": "HowToStep", "position": 4, "name": "Få din plan", "text": "Verktyget delar upp tiden fram till provdagen i faser och ger konkreta tips för dina svaga delprov." }
-      ] },
-    { "@type": "FAQPage", "mainEntity": [{ "@type":"Question","name":"Hur lägger jag upp en studieplan till högskoleprovet?","acceptedAnswer":{"@type":"Answer","text":"Utgå från hur många veckor du har kvar. Långt kvar (2 månader eller mer): börja med grunderna och bygg upp alla delprov innan du kör fulla provpass. Medellångt (3–8 veckor): blanda delprovsträning med regelbundna provpass på tid. Kort tid kvar (under 2 veckor): fokusera på repetition av det du redan kan och dina svagaste delprov, och lägg in vila före provdagen. Generatorn ovan gör den uppdelningen åt dig utifrån ditt provdatum."} },{ "@type":"Question","name":"Hur många timmar bör jag plugga till högskoleprovet?","acceptedAnswer":{"@type":"Answer","text":"Det beror på hur högt du siktar och hur mycket tid du har kvar, men många som förbereder sig ordentligt lägger några timmar i veckan under en till tre månader. Regelbundna, korta pass ger oftast bättre resultat än enstaka långa plugghelger, eftersom du hinner repetera det du lärt dig."} },{ "@type":"Question","name":"Hur långt innan högskoleprovet bör jag börja plugga?","acceptedAnswer":{"@type":"Answer","text":"Ju tidigare desto bättre, men en till tre månader med regelbunden träning brukar räcka för att gå igenom alla delprov, hitta dina svaga punkter och hinna öva på dem. Kortare tid går också, men då bör du prioritera hårdare bland delproven."} },{ "@type":"Question","name":"Vad ska jag göra sista veckan innan högskoleprovet?","acceptedAnswer":{"@type":"Answer","text":"Undvik att lära dig nytt stoff. Repetera i stället det du redan kan, gå igenom dina tidigare felsvar och gör högst ett lugnt provpass tidigt i veckan. Prioritera sömn, ta det lugnt dagen innan och se till att du vet var och när du ska vara på provdagen."} },{ "@type":"Question","name":"Sparas min studieplan?","acceptedAnswer":{"@type":"Answer","text":"Nej. Planen skapas direkt i din webbläsare utifrån det du fyller i, och ingenting skickas eller sparas någonstans. Skriv ut eller skärmdumpa planen om du vill spara den. Vill du ha en studieplan som sparas och som du kan bocka av dag för dag finns det i appen HP Klar, under Planering."} }] }
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Ange ditt provdatum",
+          "text": "Fyll i vilket datum du ska skriva högskoleprovet, så räknar verktyget ut hur många veckor du har kvar."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Ange hur mycket tid du har",
+          "text": "Välj ungefär hur många timmar i veckan du kan plugga."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Välj dina svagaste delprov",
+          "text": "Markera de delprov du vill fokusera extra på, om du redan vet vilka de är."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Få din plan",
+          "text": "Verktyget delar upp tiden fram till provdagen i faser och ger konkreta tips för dina svaga delprov."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hur lägger jag upp en studieplan till högskoleprovet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Utgå från hur många veckor du har kvar. Långt kvar (2 månader eller mer): börja med grunderna och bygg upp alla delprov innan du kör fulla provpass. Medellångt (3–8 veckor): blanda delprovsträning med regelbundna provpass på tid. Kort tid kvar (under 2 veckor): fokusera på repetition av det du redan kan och dina svagaste delprov, och lägg in vila före provdagen. Generatorn ovan gör den uppdelningen åt dig utifrån ditt provdatum."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hur många timmar bör jag plugga till högskoleprovet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Det beror på hur högt du siktar och hur mycket tid du har kvar, men många som förbereder sig ordentligt lägger några timmar i veckan under en till tre månader. Regelbundna, korta pass ger oftast bättre resultat än enstaka långa plugghelger, eftersom du hinner repetera det du lärt dig."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hur långt innan högskoleprovet bör jag börja plugga?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ju tidigare desto bättre, men en till tre månader med regelbunden träning brukar räcka för att gå igenom alla delprov, hitta dina svaga punkter och hinna öva på dem. Kortare tid går också, men då bör du prioritera hårdare bland delproven."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vad ska jag göra sista veckan innan högskoleprovet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Undvik att lära dig nytt stoff. Repetera i stället det du redan kan, gå igenom dina tidigare felsvar och gör högst ett lugnt provpass tidigt i veckan. Prioritera sömn, ta det lugnt dagen innan och se till att du vet var och när du ska vara på provdagen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Sparas min studieplan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nej. Planen skapas direkt i din webbläsare utifrån det du fyller i, och ingenting skickas eller sparas någonstans. Skriv ut eller skärmdumpa planen om du vill spara den. Vill du ha en studieplan som sparas och som du kan bocka av dag för dag finns det i appen HP Klar, under Planering."
+          }
+        }
+      ]
+    }
   ]
 }</script>
 </head>
@@ -158,6 +293,7 @@
         <h2>Guider</h2>
         <ul>
           <li><a href="/plugga-hogskoleprovet">Så pluggar du – guide</a></li>
+          <li><a href="/gamla-hogskoleprov">Gamla högskoleprov</a></li>
           <li><a href="/hogskoleprovet-app">Högskoleprovet app – så väljer du</a></li>
           <li><a href="/hogskoleprovet-datum">Högskoleprovet datum</a></li>
           <li><a href="/provdagen-hogskoleprovet">Provdagen – schema och regler</a></li>
