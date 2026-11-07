@@ -7,7 +7,7 @@
 - Språk: svenska
 - Kategori: utbildning, förberedelse inför högskoleprovet
 - Innehåll: gamla högskoleprov med facit, AI-övningar, provpass på tid, statistik, studieplan
-- Senast uppdaterad: 2026-10-29
+- Senast uppdaterad: 2026-11-07
 
 ## Sidor
 - [Startsida – högskoleprov app för att träna, plugga och öva](https://apphpklar.se/): funktioner, delprov, guide till hur man pluggar inför högskoleprovet och vanliga frågor
@@ -18,6 +18,8 @@
 - [Provdagen på högskoleprovet](https://apphpklar.se/provdagen-hogskoleprovet): schema för provdagen (fem provpass à 55 minuter, legitimationskontroll från 08.10), godkänd legitimation, tillåtna och förbjudna hjälpmedel, in- och utpasseringskontroller och tips; källa UHR/studera.nu
 - [Resultat på högskoleprovet](https://apphpklar.se/resultat-hogskoleprovet): när resultatet kommer (rättning och normering tar en dryg månad), hur råpoäng 0–160 blir normerad poäng 0,00–2,00, hur länge resultatet gäller (åtta år) och hur det används i antagningen; källa UHR/studera.nu
 - [Högskoleprovet datum](https://apphpklar.se/hogskoleprovet-datum): höstens prov skrevs söndagen den 18 oktober 2026 och resultatet kan hämtas från 25 november; datum för vårens prov 2027 är inte publicerat av UHR (källa: UHR/studera.nu)
+- [Vad är ett bra resultat på högskoleprovet?](https://apphpklar.se/bra-resultat-hogskoleprovet): medelvärde 0,88 våren 2026 och 0,90 hösten 2025 på skalan 0,00–2,00, och hur stor andel som nådde 1,00, 1,20, 1,45 och 2,00 (källa: UHR:s fördelningstabeller)
+- [Högskoleprovet gratis](https://apphpklar.se/hogskoleprovet-gratis): gratis sätt att öva (UHR:s gamla prov, gratis test, studieplan), vad man inte får gratis och att HP Klar är gratis att ladda ner med prenumeration för full tillgång
 - [Gamla högskoleprov](https://apphpklar.se/gamla-hogskoleprov): lista med länkar till UHR:s provhäften och facit för alla 28 prov från oktober 2013 till oktober 2026, och hur man övar på dem
 - [Studieplan till högskoleprovet](https://apphpklar.se/studieplan-hogskoleprovet): gratis verktyg som skapar en personlig studieplan utifrån provdatum, tid per vecka och svaga delprov, direkt i webbläsaren; inget sparas
 - [Gratis högskoleprovet-test](https://apphpklar.se/hogskoleprovet-test): gratis test med 10 riktiga uppgifter ur högskoleprovet 19 oktober 2025 (ORD, XYZ, KVA, NOG), med UHR:s facit, förklaringar och källhänvisning till studera.nu; cirka 10 minuter, inget konto

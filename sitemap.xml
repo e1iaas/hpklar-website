@@ -13,6 +13,18 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://apphpklar.se/bra-resultat-hogskoleprovet</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://apphpklar.se/hogskoleprovet-gratis</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://apphpklar.se/provdagen-hogskoleprovet</loc>
     <lastmod>2026-10-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -20,7 +32,7 @@
   </url>
   <url>
     <loc>https://apphpklar.se/resultat-hogskoleprovet</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -44,7 +56,7 @@
   </url>
   <url>
     <loc>https://apphpklar.se/hogskoleprovet-app</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
