@@ -10,21 +10,21 @@
 - Senast uppdaterad: 2026-11-07
 
 ## Sidor
-- [Startsida – högskoleprov app för att träna, plugga och öva](https://apphpklar.se/): funktioner, delprov, guide till hur man pluggar inför högskoleprovet och vanliga frågor
-- [Plugga inför högskoleprovet – guide](https://apphpklar.se/plugga-hogskoleprovet): komplett guide med hur långt innan man bör börja, en 5-stegsmetod och en genomgång av alla åtta delprov (ORD, MEK, LÄS, ELF, XYZ, KVA, NOG, DTK) med vanliga misstag och konkret strategi för varje. Varje delprov har en egen sida:
-  - [ORD](https://apphpklar.se/ord-hogskoleprovet), [MEK](https://apphpklar.se/mek-hogskoleprovet), [LÄS](https://apphpklar.se/las-hogskoleprovet), [ELF](https://apphpklar.se/elf-hogskoleprovet) (verbal del)
-  - [XYZ](https://apphpklar.se/xyz-hogskoleprovet), [KVA](https://apphpklar.se/kva-hogskoleprovet), [NOG](https://apphpklar.se/nog-hogskoleprovet), [DTK](https://apphpklar.se/dtk-hogskoleprovet) (kvantitativ del)
-- [Högskoleprovet app – så väljer du](https://apphpklar.se/hogskoleprovet-app): checklista med sju kriterier för att välja en bra högskoleprovet-app (riktiga uppgifter med facit, tydlig AI/riktigt-skillnad, provsimulering, statistik per delprov, studieplan, pris, konto), och hur HP Klar uppfyller varje kriterium
-- [Provdagen på högskoleprovet](https://apphpklar.se/provdagen-hogskoleprovet): schema för provdagen (fem provpass à 55 minuter, legitimationskontroll från 08.10), godkänd legitimation, tillåtna och förbjudna hjälpmedel, in- och utpasseringskontroller och tips; källa UHR/studera.nu
-- [Resultat på högskoleprovet](https://apphpklar.se/resultat-hogskoleprovet): när resultatet kommer (rättning och normering tar en dryg månad), hur råpoäng 0–160 blir normerad poäng 0,00–2,00, hur länge resultatet gäller (åtta år) och hur det används i antagningen; källa UHR/studera.nu
-- [Högskoleprovet datum](https://apphpklar.se/hogskoleprovet-datum): höstens prov skrevs söndagen den 18 oktober 2026 och resultatet kan hämtas från 25 november; datum för vårens prov 2027 är inte publicerat av UHR (källa: UHR/studera.nu)
-- [Vad är ett bra resultat på högskoleprovet?](https://apphpklar.se/bra-resultat-hogskoleprovet): medelvärde 0,88 våren 2026 och 0,90 hösten 2025 på skalan 0,00–2,00, och hur stor andel som nådde 1,00, 1,20, 1,45 och 2,00 (källa: UHR:s fördelningstabeller)
-- [Högskoleprovet gratis](https://apphpklar.se/hogskoleprovet-gratis): gratis sätt att öva (UHR:s gamla prov, gratis test, studieplan), vad man inte får gratis och att HP Klar är gratis att ladda ner med prenumeration för full tillgång
-- [Gamla högskoleprov](https://apphpklar.se/gamla-hogskoleprov): lista med länkar till UHR:s provhäften och facit för alla 28 prov från oktober 2013 till oktober 2026, och hur man övar på dem
-- [Studieplan till högskoleprovet](https://apphpklar.se/studieplan-hogskoleprovet): gratis verktyg som skapar en personlig studieplan utifrån provdatum, tid per vecka och svaga delprov, direkt i webbläsaren; inget sparas
-- [Gratis högskoleprovet-test](https://apphpklar.se/hogskoleprovet-test): gratis test med 10 riktiga uppgifter ur högskoleprovet 19 oktober 2025 (ORD, XYZ, KVA, NOG), med UHR:s facit, förklaringar och källhänvisning till studera.nu; cirka 10 minuter, inget konto
-- [Support](https://apphpklar.se/support): kontakt, återställa köp, avsluta prenumeration, ändra provdatum
-- [Integritetspolicy](https://apphpklar.se/integritetspolicy): hur personuppgifter behandlas
+- [Startsida – högskoleprov app för att träna, plugga och öva](https://www.apphpklar.se/): funktioner, delprov, guide till hur man pluggar inför högskoleprovet och vanliga frågor
+- [Plugga inför högskoleprovet – guide](https://www.apphpklar.se/plugga-hogskoleprovet): komplett guide med hur långt innan man bör börja, en 5-stegsmetod och en genomgång av alla åtta delprov (ORD, MEK, LÄS, ELF, XYZ, KVA, NOG, DTK) med vanliga misstag och konkret strategi för varje. Varje delprov har en egen sida:
+  - [ORD](https://www.apphpklar.se/ord-hogskoleprovet), [MEK](https://www.apphpklar.se/mek-hogskoleprovet), [LÄS](https://www.apphpklar.se/las-hogskoleprovet), [ELF](https://www.apphpklar.se/elf-hogskoleprovet) (verbal del)
+  - [XYZ](https://www.apphpklar.se/xyz-hogskoleprovet), [KVA](https://www.apphpklar.se/kva-hogskoleprovet), [NOG](https://www.apphpklar.se/nog-hogskoleprovet), [DTK](https://www.apphpklar.se/dtk-hogskoleprovet) (kvantitativ del)
+- [Högskoleprovet app – så väljer du](https://www.apphpklar.se/hogskoleprovet-app): checklista med sju kriterier för att välja en bra högskoleprovet-app (riktiga uppgifter med facit, tydlig AI/riktigt-skillnad, provsimulering, statistik per delprov, studieplan, pris, konto), och hur HP Klar uppfyller varje kriterium
+- [Provdagen på högskoleprovet](https://www.apphpklar.se/provdagen-hogskoleprovet): schema för provdagen (fem provpass à 55 minuter, legitimationskontroll från 08.10), godkänd legitimation, tillåtna och förbjudna hjälpmedel, in- och utpasseringskontroller och tips; källa UHR/studera.nu
+- [Resultat på högskoleprovet](https://www.apphpklar.se/resultat-hogskoleprovet): när resultatet kommer (rättning och normering tar en dryg månad), hur råpoäng 0–160 blir normerad poäng 0,00–2,00, hur länge resultatet gäller (åtta år) och hur det används i antagningen; källa UHR/studera.nu
+- [Högskoleprovet datum](https://www.apphpklar.se/hogskoleprovet-datum): höstens prov skrevs söndagen den 18 oktober 2026 och resultatet kan hämtas från 25 november; datum för vårens prov 2027 är inte publicerat av UHR (källa: UHR/studera.nu)
+- [Vad är ett bra resultat på högskoleprovet?](https://www.apphpklar.se/bra-resultat-hogskoleprovet): medelvärde 0,88 våren 2026 och 0,90 hösten 2025 på skalan 0,00–2,00, och hur stor andel som nådde 1,00, 1,20, 1,45 och 2,00 (källa: UHR:s fördelningstabeller)
+- [Högskoleprovet gratis](https://www.apphpklar.se/hogskoleprovet-gratis): gratis sätt att öva (UHR:s gamla prov, gratis test, studieplan), vad man inte får gratis och att HP Klar är gratis att ladda ner med prenumeration för full tillgång
+- [Gamla högskoleprov](https://www.apphpklar.se/gamla-hogskoleprov): lista med länkar till UHR:s provhäften och facit för alla 28 prov från oktober 2013 till oktober 2026, och hur man övar på dem
+- [Studieplan till högskoleprovet](https://www.apphpklar.se/studieplan-hogskoleprovet): gratis verktyg som skapar en personlig studieplan utifrån provdatum, tid per vecka och svaga delprov, direkt i webbläsaren; inget sparas
+- [Gratis högskoleprovet-test](https://www.apphpklar.se/hogskoleprovet-test): gratis test med 10 riktiga uppgifter ur högskoleprovet 19 oktober 2025 (ORD, XYZ, KVA, NOG), med UHR:s facit, förklaringar och källhänvisning till studera.nu; cirka 10 minuter, inget konto
+- [Support](https://www.apphpklar.se/support): kontakt, återställa köp, avsluta prenumeration, ändra provdatum
+- [Integritetspolicy](https://www.apphpklar.se/integritetspolicy): hur personuppgifter behandlas
 
 ## Vanliga frågor
 - Hur tränar jag inför högskoleprovet? Gör ett gammalt provpass på tid, hitta dina svaga delprov i statistiken, öva extra på dem, repetera misstag och planera studiedagar fram till provdatumet.

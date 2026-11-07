@@ -27,4 +27,4 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-Sitemap: https://apphpklar.se/sitemap.xml
+Sitemap: https://www.apphpklar.se/sitemap.xml
