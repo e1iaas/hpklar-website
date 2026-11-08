@@ -321,7 +321,7 @@ button.btn:disabled{opacity:.45;cursor:not-allowed}
 /* ---------- studieplan ---------- */
 .planform{display:grid;gap:20px;max-width:560px}
 .field label:not(.chk),legend{display:block;font-weight:800;color:var(--navy);margin-bottom:8px;font-size:1rem}
-.field .opt{font-weight:500;color:var(--muted);font-size:.9rem}
+.field .optional{font-weight:500;color:var(--muted);font-size:.9rem}
 .field input[type=date],.field select{width:100%;padding:13px 14px;border:2px solid var(--line);border-radius:12px;font-size:1.05rem;font-family:inherit;color:var(--ink);background:#fff}
 .field input[type=date]:focus-visible,.field select:focus-visible{outline:3px solid var(--gold-bright);outline-offset:2px;border-color:var(--navy)}
 fieldset.field{border:0;padding:0;margin:0}
@@ -390,8 +390,49 @@ fieldset.field{border:0;padding:0;margin:0}
   table.keep td:nth-child(n){font-size:.95rem;font-weight:400;color:var(--ink)}
   table.keep td:nth-child(1){font-weight:700;color:var(--navy);white-space:nowrap}
   table.keep td::before,table.keep td::after{content:none}
-  table.keep td a{white-space:nowrap}
+  table.keep.nw td a{white-space:nowrap}
   table.keep caption{display:table-caption}
 }
 .sched tr.pass td{background:#F3F5FC;font-weight:700}
 .sched tr.rest td{color:var(--muted)}
+
+/* ---------- verktyg ---------- */
+.field input[type=number],.field input[type=time]{width:100%;padding:13px 14px;border:2px solid var(--line);border-radius:12px;font-size:1.05rem;font-family:inherit;color:var(--ink);background:#fff}
+.field input[type=number]:focus-visible,.field input[type=time]:focus-visible{outline:3px solid var(--gold-bright);outline-offset:2px;border-color:var(--navy)}
+.field .hint{display:block;font-weight:500;color:var(--muted);font-size:.9rem;margin-top:6px}
+.numgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.numgrid>*,.wdgrid>*,.chkgrid>*{min-width:0}
+fieldset.field{min-width:0}
+.field input[type=date]{min-width:0}
+.wdgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.wdgrid .chk{padding:10px;justify-content:center;gap:8px}
+.btnrow{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.sched td input[type=checkbox]{width:22px;height:22px;accent-color:var(--navy)}
+.tbig{font-family:var(--serif);font-weight:700;font-size:clamp(3.6rem,16vw,6.5rem);color:var(--navy);line-height:1;margin:0;font-variant-numeric:tabular-nums}
+.tsub{color:var(--muted);font-weight:600;margin:8px 0 0}
+.blocks{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:8px}
+.blocks li{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;border:2px solid var(--line);border-radius:12px;font-weight:700;color:var(--navy)}
+.blocks li small{font-weight:500;color:var(--muted)}
+.blocks li.now{border-color:var(--navy);background:#F3F5FC}
+.blocks li.done{opacity:.45}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;text-align:center;margin-bottom:18px}
+.cd div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 4px}
+.cd b{display:block;font-family:var(--serif);font-size:clamp(1.8rem,8vw,3rem);color:var(--navy);line-height:1.1;font-variant-numeric:tabular-nums}
+.cd span{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:800}
+.bars{list-style:none;padding:0;margin:16px 0;display:grid;gap:10px}
+.bars li{display:grid;grid-template-columns:52px 1fr 52px;gap:10px;align-items:center;margin:0}
+.pbar{height:12px;border-radius:999px;background:#EFEAD8;overflow:hidden}
+.pbar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-bright));border-radius:999px}
+.formula{display:grid;gap:10px;margin:0 0 8px;padding:0;list-style:none}
+.formula li{margin:0;padding:12px 16px;background:#fff;border:1px solid var(--line);border-radius:12px}
+.formula b{color:var(--navy)}
+@media(max-width:719px){.wdgrid{grid-template-columns:repeat(4,1fr)}.wdgrid .chk .dot{display:none}.wdgrid .chk{padding:10px 4px}.cd{gap:6px}}
+@media print{.noprint,.btnrow{display:none!important}}
+
+@media(max-width:719px){.numgrid.stack{grid-template-columns:1fr}}
+
+.nw{white-space:nowrap}
+.sched td{overflow-wrap:anywhere}
+.sched small{font-size:.82rem}
+@media(max-width:719px){.sched th,.sched td{padding-left:8px;padding-right:8px}}
+@media(max-width:719px){table.keep.cmp th,table.keep.cmp td{padding-left:5px;padding-right:5px;font-size:.88rem}table.keep.cmp td:last-child{white-space:nowrap}}

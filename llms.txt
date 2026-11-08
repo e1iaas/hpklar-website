@@ -7,7 +7,7 @@
 - Språk: svenska
 - Kategori: utbildning, förberedelse inför högskoleprovet
 - Innehåll: gamla högskoleprov med facit, AI-övningar, provpass på tid, statistik, studieplan
-- Senast uppdaterad: 2026-11-07
+- Senast uppdaterad: 2026-11-08
 
 ## Sidor
 - [Startsida – högskoleprov app för att träna, plugga och öva](https://www.apphpklar.se/): funktioner, delprov, guide till hur man pluggar inför högskoleprovet och vanliga frågor
@@ -21,6 +21,14 @@
 - [Vad är ett bra resultat på högskoleprovet?](https://www.apphpklar.se/bra-resultat-hogskoleprovet): medelvärde 0,88 våren 2026 och 0,90 hösten 2025 på skalan 0,00–2,00, och hur stor andel som nådde 1,00, 1,20, 1,45 och 2,00 (källa: UHR:s fördelningstabeller)
 - [Högskoleprovet gratis](https://www.apphpklar.se/hogskoleprovet-gratis): gratis sätt att öva (UHR:s gamla prov, gratis test, studieplan), vad man inte får gratis och att HP Klar är gratis att ladda ner med prenumeration för full tillgång
 - [Gamla högskoleprov](https://www.apphpklar.se/gamla-hogskoleprov): lista med länkar till UHR:s provhäften och facit för alla 28 prov från oktober 2013 till oktober 2026, och hur man övar på dem
+- [Gratis verktyg för högskoleprovet](https://www.apphpklar.se/verktyg-hogskoleprovet): samlingssida för alla verktyg
+  - [Poängräknare](https://www.apphpklar.se/poangrakning-hogskoleprovet): Räkna ut din normerade poäng från antal rätt, med UHR:s tabeller för 22 prov.
+  - [Hur många rätt krävs?](https://www.apphpklar.se/hur-manga-ratt-hogskoleprovet): Se hur många rätt som krävdes för 1,0, 1,5 eller 2,0 vid olika prov.
+  - [Pluggschema](https://www.apphpklar.se/pluggschema-hogskoleprovet): Skapa ett schema med dagar, tider och delprov och exportera det till kalendern.
+  - [Provtimer](https://www.apphpklar.se/timer-hogskoleprovet): Öva på tid med UHR:s rekommenderade tid per delprov.
+  - [Nedräkning](https://www.apphpklar.se/nedrakning-hogskoleprovet): Se hur många dagar, timmar och minuter det är kvar till provet.
+  - [Delprovsanalys](https://www.apphpklar.se/delprovsanalys-hogskoleprovet): Se vilka delprov du bör prioritera och hur du fördelar pluggtiden.
+  - [Formelsamling](https://www.apphpklar.se/formelsamling-hogskoleprovet): Procent, potenser, geometri, sannolikhet och snabbtal för XYZ, KVA, NOG och DTK.
 - [Studieplan till högskoleprovet](https://www.apphpklar.se/studieplan-hogskoleprovet): gratis verktyg som skapar en personlig studieplan utifrån provdatum, tid per vecka och svaga delprov, direkt i webbläsaren; inget sparas
 - [Gratis högskoleprovet-test](https://www.apphpklar.se/hogskoleprovet-test): gratis test med 10 riktiga uppgifter ur högskoleprovet 19 oktober 2025 (ORD, XYZ, KVA, NOG), med UHR:s facit, förklaringar och källhänvisning till studera.nu; cirka 10 minuter, inget konto
 - [Support](https://www.apphpklar.se/support): kontakt, återställa köp, avsluta prenumeration, ändra provdatum
