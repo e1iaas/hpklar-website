@@ -447,3 +447,21 @@ figcaption{color:var(--muted);font-size:.9rem;margin-top:6px}
 .chart .ch-k{stroke:var(--gold);stroke-width:2.5}.chart .ch-kd{fill:var(--gold)}
 .chart .ch-n{fill:var(--navy);opacity:.85}
 .lg{display:inline-block;width:12px;height:12px;border-radius:3px;margin:0 6px 0 12px;vertical-align:middle}.lg:first-child{margin-left:0}.lgv{background:var(--navy)}.lgk{background:var(--gold)}
+
+/* flashcards, glossary, guide lists */
+.fcard{padding:8px 0}
+.ffront{font-family:var(--serif);font-size:1.5rem;font-weight:700;color:var(--navy);margin:10px 0;overflow-wrap:anywhere}
+.fback{font-size:1.15rem;margin:10px 0 16px;padding:14px 16px;background:#f3f6fb;border-radius:12px;overflow-wrap:anywhere}
+.clist{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.clist li{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:10px 12px;border:1px solid #dfe5ee;border-radius:10px}
+.clist li span{min-width:0;overflow-wrap:anywhere}
+.h3{font-size:1.15rem;margin:0 0 12px}
+dl.glossary{display:grid;gap:0;margin:0}
+dl.glossary dt{font-weight:700;color:var(--navy);margin-top:14px;font-size:1.05rem}
+dl.glossary dd{margin:2px 0 0;padding-bottom:12px;border-bottom:1px solid #e6ebf3;overflow-wrap:anywhere}
+.cardlist{list-style:none;padding:0;margin:0 0 8px;display:grid;gap:10px}
+.cardlist li{padding:14px 16px;border:1px solid #dfe5ee;border-radius:12px;overflow-wrap:anywhere}
+.cardlist a{display:block;font-size:1.05rem}
+ol.refs{padding-left:22px;font-size:.92rem;display:grid;gap:8px;overflow-wrap:anywhere}
+
+[hidden]{display:none!important}

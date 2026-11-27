@@ -31,6 +31,16 @@
   - [Formelsamling](https://www.apphpklar.se/formelsamling-hogskoleprovet): Procent, potenser, geometri, sannolikhet och snabbtal för XYZ, KVA, NOG och DTK.
 - [Normeringstabeller och statistik](https://www.apphpklar.se/normeringstabeller-hogskoleprovet): normeringstabell, medelresultat och antal deltagare för 23 högskoleprov 2013–2026, med en egen sida per prov (t.ex. https://www.apphpklar.se/normering-hogskoleprovet-18-oktober-2026)
 - [Normering högskoleprovet 2026](https://www.apphpklar.se/normering-hogskoleprovet-2026): höstens (18 oktober) och vårens (18 april) prov 2026 jämförda: rätt per del för 1,0–2,0, medelresultat 0,91 och 0,88, andel som nådde resultatet, och hur normeringen fungerar (källa UHR)
+- [Hur får man högt resultat på högskoleprovet](https://www.apphpklar.se/hur-far-man-hogt-resultat-hogskoleprovet): rätt och fel per del för 1,0–2,0 enligt UHR:s normeringstabeller, andel som når varje nivå
+- [Hur får man 1,6 på högskoleprovet](https://www.apphpklar.se/hur-far-man-1-6-pa-hogskoleprovet): 66–69 rätt per del krävdes, 5,0 % nådde det hösten 2026
+- [Hur får man 1,7 på högskoleprovet](https://www.apphpklar.se/hur-far-man-1-7-pa-hogskoleprovet): 69–71 rätt per del krävdes, 2,6 % nådde det hösten 2026
+- [Hur får man 1,8 på högskoleprovet](https://www.apphpklar.se/hur-far-man-1-8-pa-hogskoleprovet): 71–73 rätt per del krävdes, 1,1 % nådde det hösten 2026
+- [Bästa sättet att plugga inför högskoleprovet](https://www.apphpklar.se/basta-sattet-att-plugga-hogskoleprovet): vad forskningen säger om provtagning, utspridd repetition, blandad övning, sömn och provångest (med källor)
+- [Vad är högskoleprovet?](https://www.apphpklar.se/vad-ar-hogskoleprovet): 160 uppgifter i fem provpass, åtta delprov, resultatet gäller åtta år (källa UHR)
+- [Repetitionsschema för högskoleprovet](https://www.apphpklar.se/repetitionsschema-hogskoleprovet): gratis verktyg med utspridd repetition och kalenderfil
+- [Flashcards för högskoleprovet](https://www.apphpklar.se/flashcards-hogskoleprovet): gratis flashcards med Leitner-lådor, sparas i webbläsaren
+- [Ordlista för högskoleprovet](https://www.apphpklar.se/ordlista-hogskoleprovet): 75 ord med förklaringar för ORD och MEK
+- [Guider för högskoleprovet](https://www.apphpklar.se/guider-hogskoleprovet): alla guider, data och verktyg
 - [Studieplan till högskoleprovet](https://www.apphpklar.se/studieplan-hogskoleprovet): gratis verktyg som skapar en personlig studieplan utifrån provdatum, tid per vecka och svaga delprov, direkt i webbläsaren; inget sparas
 - [Gratis högskoleprovet-test](https://www.apphpklar.se/hogskoleprovet-test): gratis test med 10 riktiga uppgifter ur högskoleprovet 19 oktober 2025 (ORD, XYZ, KVA, NOG), med UHR:s facit, förklaringar och källhänvisning till studera.nu; cirka 10 minuter, inget konto
 - [Support](https://www.apphpklar.se/support): kontakt, återställa köp, avsluta prenumeration, ändra provdatum

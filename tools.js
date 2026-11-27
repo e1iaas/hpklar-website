@@ -110,7 +110,51 @@
     return rows.sort((a, b) => a.pct - b.pct);
   }
 
-  const api = { DP, parseRaw, result, atLeast, balanced, verbNeeded, ymd, addDays, buildSchedule, buildICS, blocksFor, blockAt, fmt, countdown, analyse, sv };
+
+  // ---------- repetitionsschema (utspridd repetition) ----------
+  // Första avståndet följer Cepeda m.fl. (2008): optimalt avstånd växer med tiden till provet, ca 20–40 % av en veckas
+  // fördröjning men ca 5–10 % av ett års. Vi interpolerar på log-skala mellan 30 % vid 7 dagar och 7,5 % vid 365 dagar.
+  // Att därefter fördubbla avståndet är en vanlig tumregel, inte något den studien bevisat.
+  const daysBetween = (a, b) => Math.round((b - a) / 864e5);
+  const firstGap = T => Math.max(1, Math.round(2.1 * Math.pow(T / 7, 0.6494)));
+  function spacedDates(learn, test) {
+    const T = daysBetween(learn, test); if (T < 3) return [];
+    const out = []; let t = 0, gap = Math.min(firstGap(T), Math.floor(T / 2));
+    for (;;) { t += gap; if (t > T - 1) break; out.push({ date: addDays(learn, t), day: t, n: out.length + 1 }); gap *= 2; }
+    const last = out.length ? out[out.length - 1].day : 0;
+    if (T - 2 >= last + 2) out.push({ date: addDays(learn, T - 2), day: T - 2, n: out.length + 1 }); // sista repetitionen två dagar före provet
+    return out;
+  }
+
+  // ---------- flashcards (Leitner, 5 lådor) ----------
+  const BOX_DAYS = [1, 2, 4, 8, 16];
+  const MAX_CARDS = 2000, MAX_LEN = 300;
+  const cleanText = x => (typeof x === 'string' ? x.replace(/\s+/g, ' ').trim() : '');
+  function makeCard(f, b, today, id) {
+    f = cleanText(f); b = cleanText(b);
+    if (!f || !b || f.length > MAX_LEN || b.length > MAX_LEN) return null;
+    return { id: id || Date.now().toString(36) + Math.random().toString(36).slice(2, 7), f, b, box: 1, due: ymd(today) };
+  }
+  function review(card, correct, today) {
+    const box = correct ? Math.min(5, card.box + 1) : 1;
+    return Object.assign({}, card, { box, due: ymd(addDays(today, BOX_DAYS[box - 1])) });
+  }
+  const dueCards = (cards, today) => cards.filter(c => c.due <= ymd(today)).sort((a, b) => a.box - b.box || (a.due < b.due ? -1 : a.due > b.due ? 1 : 0));
+  // Importerad data är opålitlig: validera allt, släng skräp, ta bort dubbletter och begränsa antalet.
+  function importCards(json, existing, today) {
+    let data; try { data = JSON.parse(json); } catch (e) { return { error: 'Filen är inte giltig JSON.' }; }
+    if (!Array.isArray(data)) return { error: 'Förväntade en lista med kort.' };
+    const seen = new Set(existing.map(c => c.f + '\u0001' + c.b)), cards = existing.slice(); let added = 0, skipped = 0;
+    for (const x of data) {
+      const c = x && typeof x === 'object' ? makeCard(x.f, x.b, today) : null;
+      if (!c || seen.has(c.f + '\u0001' + c.b) || cards.length >= MAX_CARDS) { skipped++; continue; }
+      const box = Number.isInteger(x.box) && x.box >= 1 && x.box <= 5 ? x.box : 1, due = typeof x.due === 'string' && /^\d{4}-\d\d-\d\d$/.test(x.due) ? x.due : c.due;
+      cards.push(Object.assign(c, { box, due })); seen.add(c.f + '\u0001' + c.b); added++;
+    }
+    return { cards, added, skipped };
+  }
+
+  const api = { DP, parseRaw, result, atLeast, balanced, verbNeeded, ymd, addDays, buildSchedule, buildICS, blocksFor, blockAt, fmt, countdown, analyse, sv, spacedDates, firstGap, makeCard, review, dueCards, importCards, BOX_DAYS };
   if (typeof module !== 'undefined') { module.exports = api; return; }
   root.HPTOOLS = api;
   if (typeof document === 'undefined') return;
@@ -287,6 +331,105 @@
         rows.map(r => '<tr><td><a href="/' + r.d.s + '">' + r.d.c + '</a></td><td>' + r.ok + ' av ' + r.d.q + '</td><td>' + r.min + ' min</td></tr>').join('') + '</tbody></table></div>' +
         '<p class="note">Ett enda provpass är ett litet underlag (NOG har till exempel bara 6 uppgifter), så se resultatet som en fingervisning. Gör fler prov för säkrare slutsatser.</p>';
       out.hidden = false; out.focus({ preventScroll: true });
+    });
+  }
+  // ----- repetitionsschema -----
+  const sp = $('[data-tool="spaced"]');
+  if (sp) {
+    const td = $('#rdate', sp), ld = $('#rlearn', sp), tp = $('#rtopic', sp), tm = $('#rtime', sp), out = $('#rout', sp), err = $('.formerr', sp);
+    td.value = store.get('hpk_testdate') || dflt(); ld.value = ymd(today()); td.min = ymd(today());
+    let cur = null;
+    const esc = x => String(x).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    sp.addEventListener('submit', e => {
+      e.preventDefault();
+      if (!td.value || !ld.value) { msg(err, 'Fyll i både provdatum och när du lär dig ämnet.'); out.hidden = true; return; }
+      const learn = localDate(ld.value), test = localDate(td.value), topic = tp.value.replace(/\s+/g, ' ').trim().slice(0, 60) || 'ämnet';
+      if (test <= today()) { msg(err, 'Provdatumet måste ligga framåt i tiden.'); out.hidden = true; return; }
+      if (learn < today()) { msg(err, 'Datumet du lär dig ämnet kan inte ligga bakåt i tiden.'); out.hidden = true; return; }
+      const dates = spacedDates(learn, test), T = daysBetween(learn, test);
+      if (!dates.length) { msg(err, 'Det är för kort tid till provet för utspridd repetition (minst 3 dagar behövs). Repetera i stället dagligen.'); out.hidden = true; return; }
+      msg(err, ''); store.set('hpk_testdate', td.value);
+      const hm = (tm.value || '18:00').split(':'), h = +hm[0] || 18, mi = +hm[1] || 0;
+      cur = { sessions: dates.map(d => ({ date: d.date, key: 'rep' + ymd(learn) + '-' + d.n, type: 'rep', label: 'Repetera ' + topic + ' (' + d.n + ' av ' + dates.length + ')', minutes: 20 })), h: h, m: mi };
+      out.innerHTML = '<p class="eyebrow">Ditt repetitionsschema</p><p class="res-msg">Första repetitionen efter <strong>' + firstGap(T) + ' dagar</strong> (' + sv(firstGap(T) / T * 100, 0) + ' % av tiden till provet), sedan fördubblas avståndet. Totalt <strong>' + dates.length + ' repetitioner</strong> av ' + esc(topic) + ' före provet.</p>' +
+        '<div class="table-wrap"><table class="keep"><thead><tr><th scope="col">#</th><th scope="col">Datum</th><th scope="col">Dag</th><th scope="col">Sedan förra</th></tr></thead><tbody>' +
+        dates.map((d, i) => '<tr><td>' + d.n + '</td><td>' + dstr(d.date) + '</td><td>' + d.day + '</td><td>' + (d.day - (i ? dates[i - 1].day : 0)) + ' dagar</td></tr>').join('') + '</tbody></table></div>' +
+        '<p class="btnrow"><button type="button" class="btn" id="rdl">Ladda ned kalenderfil (.ics)</button> <button type="button" class="btn ghost" id="rpr">Skriv ut</button></p>' +
+        '<p class="note">Gör varje repetition som ett test: svara från minnet innan du tittar i facit. Avståndet bygger på Cepeda m.fl. (2008). Att fördubbla avståndet efter första repetitionen är en tumregel, inte något den studien bevisat.</p>';
+      out.hidden = false; out.focus({ preventScroll: true });
+    });
+    out.addEventListener('click', e => {
+      if (e.target.id === 'rpr') window.print();
+      if (e.target.id === 'rdl' && cur) {
+        const blob = new Blob([buildICS(cur.sessions, cur.h, cur.m, new Date())], { type: 'text/calendar;charset=utf-8' }), a = document.createElement('a');
+        a.href = URL.createObjectURL(blob); a.download = 'repetitionsschema-hogskoleprovet.ics'; document.body.appendChild(a); a.click(); a.parentNode.removeChild(a);
+      }
+    });
+  }
+
+  // ----- flashcards (Leitner) -----
+  const cardsLoad = () => { try { const x = JSON.parse(store.get('hpk_cards') || '[]'); return Array.isArray(x) ? x : []; } catch (e) { return []; } };
+  const cardsSave = c => store.set('hpk_cards', JSON.stringify(c));
+  const fc = $('[data-tool="cards"]');
+  if (fc) {
+    const view = $('#cview', fc), stat = $('#cstat', fc), err = $('.formerr', fc), list = $('#clist', fc), addf = $('#cadd', fc), ex = $('#cex', fc);
+    let cards = cardsLoad(), queue = [];
+    // textContent only: kortens text är aldrig HTML
+    const el = (tag, txt, cls) => { const n = document.createElement(tag); if (txt != null) n.textContent = txt; if (cls) n.className = cls; return n; };
+    const save = () => cardsSave(cards);
+    const renderStat = () => {
+      const due = dueCards(cards, today()).length, per = [1, 2, 3, 4, 5].map(b => cards.filter(c => c.box === b).length);
+      stat.textContent = cards.length + ' kort, ' + due + ' att repetera idag. Lådor 1–5: ' + per.join(' / ') + '.';
+    };
+    const renderList = () => {
+      list.textContent = '';
+      cards.slice().reverse().slice(0, 200).forEach(c => {
+        const li = el('li'), b = el('button', 'Ta bort', 'btn ghost sm'); li.appendChild(el('span', c.f + ' → ' + c.b)); b.type = 'button'; b.setAttribute('data-del', c.id); li.appendChild(b); list.appendChild(li);
+      });
+    };
+    const next = () => {
+      view.textContent = ''; renderStat(); renderList();
+      if (!queue.length) queue = dueCards(cards, today());
+      if (!queue.length) { view.appendChild(el('p', cards.length ? 'Inga kort att repetera idag. Kom tillbaka imorgon eller lägg till fler kort.' : 'Du har inga kort ännu. Lägg till egna kort eller hämta ord från ordlistan.', 'res-msg')); return; }
+      const c = queue[0], card = el('div', null, 'fcard'), ans = el('p', c.b, 'fback'), row = el('p', null, 'btnrow'), show = el('button', 'Visa svar', 'btn'), ok = el('button', 'Kunde det', 'btn'), no = el('button', 'Kunde inte', 'btn ghost');
+      card.appendChild(el('p', 'Låda ' + c.box + ' · ' + queue.length + ' kvar', 'eyebrow')); card.appendChild(el('p', c.f, 'ffront')); ans.hidden = true; card.appendChild(ans);
+      [show, ok, no].forEach(b => { b.type = 'button'; row.appendChild(b); }); ok.hidden = no.hidden = true; card.appendChild(row); view.appendChild(card);
+      show.addEventListener('click', () => { ans.hidden = false; show.hidden = true; ok.hidden = no.hidden = false; });
+      const answer = good => { const i = cards.findIndex(x => x.id === c.id); if (i >= 0) cards[i] = review(c, good, today()); save(); queue.shift(); next(); };
+      ok.addEventListener('click', () => answer(true)); no.addEventListener('click', () => answer(false));
+    };
+    addf.addEventListener('submit', e => {
+      e.preventDefault();
+      if (cards.length >= MAX_CARDS) { msg(err, 'Max ' + MAX_CARDS + ' kort.'); return; }
+      const c = makeCard($('#cf', addf).value, $('#cb', addf).value, today());
+      if (!c) { msg(err, 'Fyll i både fråga och svar (max ' + MAX_LEN + ' tecken vardera).'); return; }
+      msg(err, ''); cards.push(c); save(); queue = []; $('#cf', addf).value = ''; $('#cb', addf).value = ''; $('#cf', addf).focus(); next();
+    });
+    list.addEventListener('click', e => { const id = e.target.getAttribute && e.target.getAttribute('data-del'); if (id) { cards = cards.filter(c => c.id !== id); save(); queue = []; next(); } });
+    $('#cexport', ex).addEventListener('click', () => {
+      const blob = new Blob([JSON.stringify(cards, null, 1)], { type: 'application/json' }), a = document.createElement('a');
+      a.href = URL.createObjectURL(blob); a.download = 'hp-klar-flashcards.json'; document.body.appendChild(a); a.click(); a.parentNode.removeChild(a);
+    });
+    $('#cimport', ex).addEventListener('change', e => {
+      const f = e.target.files && e.target.files[0]; if (!f) return;
+      if (f.size > 1e6) { msg(err, 'Filen är för stor (max 1 MB).'); return; }
+      const r = new FileReader();
+      r.onload = () => { const res = importCards(String(r.result), cards, today()); if (res.error) { msg(err, res.error); return; } cards = res.cards; save(); queue = []; msg(err, ''); next(); stat.textContent += ' Importerade ' + res.added + ', hoppade över ' + res.skipped + '.'; };
+      r.readAsText(f);
+    });
+    $('#creset', ex).addEventListener('click', () => { if (window.confirm('Ta bort alla kort från den här webbläsaren?')) { cards = []; save(); queue = []; next(); } });
+    next();
+  }
+
+  // ----- ordlista: lägg orden i flashcards -----
+  const aw = $('[data-tool="addwords"]');
+  if (aw) {
+    const btn = $('button', aw), note = $('.res-msg', aw);
+    btn.addEventListener('click', () => {
+      const items = $$('dl.glossary dt').map(dt => ({ f: dt.textContent, b: dt.nextElementSibling ? dt.nextElementSibling.textContent : '' }));
+      const res = importCards(JSON.stringify(items), cardsLoad(), today());
+      if (res.error) { note.textContent = res.error; note.hidden = false; return; }
+      cardsSave(res.cards); note.textContent = res.added + ' ord lades till i dina flashcards' + (res.skipped ? ' (' + res.skipped + ' fanns redan).' : '.'); note.hidden = false;
     });
   }
 })(typeof window !== 'undefined' ? window : globalThis);
