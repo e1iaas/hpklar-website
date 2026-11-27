@@ -127,6 +127,9 @@
   const localDate = v => { const p = v.split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); };
   const today = () => { const n = new Date(); return new Date(n.getFullYear(), n.getMonth(), n.getDate()); };
   const msg = (el, t) => { el.textContent = t; el.hidden = !t; };
+  // Nästa provdag enligt UHR (anmälan 7–14 januari 2027). Förifylls bara så länge datumet ligger framåt i tiden.
+  const NEXT_TEST = '2027-04-10';
+  const dflt = () => (NEXT_TEST >= ymd(today()) ? NEXT_TEST : '');
 
   // ----- poängräknare -----
   const calc = $('[data-tool="calc"]');
@@ -177,7 +180,7 @@
   if (sch) {
     const out = $('#sout'), err = $('.formerr', sch), sd = $('#sstart', sch), td = $('#stest', sch);
     const t0 = today(); sd.value = ymd(t0); sd.min = ymd(t0); td.min = ymd(addDays(t0, 2));
-    const saved = store.get('hpk_testdate'); if (saved) td.value = saved;
+    td.value = store.get('hpk_testdate') || dflt();
     let cur = null;
     const done = () => { try { return JSON.parse(store.get('hpk_done') || '{}'); } catch (e) { return {}; } };
     const render = () => {
@@ -249,7 +252,7 @@
   const cd = $('[data-tool="count"]');
   if (cd) {
     const inp = $('#cdate', cd), out = $('#cout', cd), err = $('.formerr', cd);
-    const saved = store.get('hpk_testdate'); if (saved) inp.value = saved;
+    inp.value = store.get('hpk_testdate') || dflt();
     inp.min = ymd(today());
     let iv = null;
     const tick = () => {

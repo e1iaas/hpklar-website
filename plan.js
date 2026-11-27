@@ -1,5 +1,6 @@
 (function(){
   var form=document.getElementById('planform'); if(!form) return;
+  var pdi=document.getElementById('pdatum'); if(pdi&&!pdi.value){var nw=new Date(),td0=nw.getFullYear()+'-'+('0'+(nw.getMonth()+1)).slice(-2)+'-'+('0'+nw.getDate()).slice(-2); if('2027-04-10'>=td0) pdi.value='2027-04-10';}
   var out=document.getElementById('plan'), err=document.getElementById('planerr');
   var TIPS={"ORD": "Läs mycket och slå upp okända ord. Försök alltid gissa betydelsen från sammanhanget innan du kollar facit.", "MEK": "Läs hela meningen, hitta signalord som ”trots”, ”eftersom” och ”däremot”, och pröva alternativen ett i taget.", "LÄS": "Läs frågorna innan du läser hela texten i detalj, och gå tillbaka till texten för att belägga varje svar – gissa inte från minnet.", "ELF": "Läs frågan först, leta upp stället i texten och håll utkik efter signalord som however och but.", "XYZ": "Gör om enheter och procent först, och kontrollera att svaret är rimligt innan du går vidare.", "KVA": "Testa flera värden (negativt, noll, bråk och ett) för att se om jämförelsen kan ändras.", "NOG": "Bedöm varje uppgift för sig först och därefter tillsammans. Du ska inte lösa uppgiften, bara avgöra om informationen räcker.", "DTK": "Läs titel, enheter och axlar noga innan du svarar, och räkna på startvärdet vid procentändringar."};
   var RHYTHM={
