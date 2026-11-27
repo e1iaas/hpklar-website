@@ -436,3 +436,14 @@ fieldset.field{min-width:0}
 .sched small{font-size:.82rem}
 @media(max-width:719px){.sched th,.sched td{padding-left:8px;padding-right:8px}}
 @media(max-width:719px){table.keep.cmp th,table.keep.cmp td{padding-left:5px;padding-right:5px;font-size:.88rem}table.keep.cmp td:last-child{white-space:nowrap}}
+
+/* ---------- diagram och figurer ---------- */
+figure{margin:0 0 16px}
+figcaption{color:var(--muted);font-size:.9rem;margin-top:6px}
+.chart{width:100%;height:auto;display:block}
+.chart .grid{stroke:var(--line);stroke-width:1}
+.chart .ax{fill:var(--muted);font-size:19px;font-family:var(--sans)}
+.chart .ch-v{stroke:var(--navy);stroke-width:2.5}.chart .ch-vd{fill:var(--navy)}
+.chart .ch-k{stroke:var(--gold);stroke-width:2.5}.chart .ch-kd{fill:var(--gold)}
+.chart .ch-n{fill:var(--navy);opacity:.85}
+.lg{display:inline-block;width:12px;height:12px;border-radius:3px;margin:0 6px 0 12px;vertical-align:middle}.lg:first-child{margin-left:0}.lgv{background:var(--navy)}.lgk{background:var(--gold)}

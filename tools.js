@@ -28,6 +28,12 @@
   };
   // Resultatet är medelvärdet av de två normerade delpoängen (båda i steg om 0,1 => svaret blir en exakt multipel av 0,05).
   const result = (t, rv, rk) => Math.round(((t.v[rv] + t.k[rk]) / 2) * 100) / 100;
+  // Andel (%) av deltagarna som nådde minst resultatet res (kräver fördelningen t.d; annars null).
+  const atLeast = (t, res) => {
+    if (!t.d) return null;
+    let below = 0; for (let j = 0; j < Math.round(res * 20); j++) below += t.d[j];
+    return Math.round((1 - below / t.n) * 1000) / 10;
+  };
   const balanced = (t, target) => { for (let r = 0; r <= 80; r++) if (result(t, r, r) >= target - 1e-9) return r; return null; };
   const verbNeeded = (t, rk, target) => { for (let r = 0; r <= 80; r++) if (result(t, r, rk) >= target - 1e-9) return r; return null; };
 
@@ -104,7 +110,7 @@
     return rows.sort((a, b) => a.pct - b.pct);
   }
 
-  const api = { DP, parseRaw, result, balanced, verbNeeded, ymd, addDays, buildSchedule, buildICS, blocksFor, blockAt, fmt, countdown, analyse, sv };
+  const api = { DP, parseRaw, result, atLeast, balanced, verbNeeded, ymd, addDays, buildSchedule, buildICS, blocksFor, blockAt, fmt, countdown, analyse, sv };
   if (typeof module !== 'undefined') { module.exports = api; return; }
   root.HPTOOLS = api;
   if (typeof document === 'undefined') return;
@@ -132,13 +138,13 @@
       const rv = parseRaw($('#rv', calc).value), rk = parseRaw($('#rk', calc).value);
       if (rv === null || rk === null) { msg(err, 'Fyll i heltal mellan 0 och 80 för båda delarna.'); out.hidden = true; return; }
       msg(err, '');
-      const t = TESTS[+sel.value], res = result(t, rv, rk), avg = (t.mv + t.mk) / 2;
+      const t = TESTS[+sel.value], res = result(t, rv, rk), avg = (t.mv + t.mk) / 2, al = atLeast(t, res);
       const cmp = TESTS.map(x => ({ n: x.name, r: result(x, rv, rk) }));
       const lo = Math.min.apply(null, cmp.map(c => c.r)), hi = Math.max.apply(null, cmp.map(c => c.r));
       out.innerHTML = '<p class="eyebrow">Ditt resultat</p><p class="score"><span>' + sv(res, 2) + '</span><small>av 2,00</small></p>' +
         '<dl class="facts tiles"><div><dt>Verbal del</dt><dd>' + rv + ' rätt → ' + sv(t.v[rv], 1) + '</dd></div><div><dt>Kvantitativ del</dt><dd>' + rk + ' rätt → ' + sv(t.k[rk], 1) + '</dd></div>' +
-        '<div><dt>Snitt vid provet</dt><dd>' + sv(avg, 2) + '</dd></div><div><dt>Totalt rätt</dt><dd>' + (rv + rk) + ' av 160</dd></div></dl>' +
-        '<p>' + (res > avg + 0.025 ? 'Det är över' : res < avg - 0.025 ? 'Det är under' : 'Det är i nivå med') + ' medelresultatet vid <strong>' + t.name + '</strong> (' + sv(avg, 2) + ').</p>' +
+        (al !== null ? '<div><dt>Andel som nådde det</dt><dd>' + sv(al, 1) + ' %</dd></div>' : '<div><dt>Snitt vid provet</dt><dd>' + sv(avg, 2) + '</dd></div>') + '<div><dt>Totalt rätt</dt><dd>' + (rv + rk) + ' av 160</dd></div></dl>' +
+        '<p>' + (res > avg + 0.025 ? 'Det är över' : res < avg - 0.025 ? 'Det är under' : 'Det är i nivå med') + ' medelresultatet vid <strong>' + t.name + '</strong> (' + sv(avg, 2) + ').' + (al !== null ? ' Ungefär <strong>' + sv(al, 1) + ' %</strong> av deltagarna nådde minst ditt resultat.' : '') + '</p>' +
         '<details><summary>Samma antal rätt på andra prov (visar hur normeringen skiljer)</summary><div class="a"><p>Med exakt samma antal rätt hade resultatet blivit mellan <strong>' + sv(lo, 2) + '</strong> och <strong>' + sv(hi, 2) + '</strong> beroende på provets svårighetsgrad. Räkna alltid med det prov du faktiskt gjorde.</p>' +
         '<div class="table-wrap"><table class="keep"><thead><tr><th scope="col">Prov</th><th scope="col">Resultat</th></tr></thead><tbody>' + cmp.map(c => '<tr><td>' + c.n + '</td><td>' + sv(c.r, 2) + '</td></tr>').join('') + '</tbody></table></div></div></details>' +
         '<p class="note">Källa: UHR:s normeringstabeller för provet. Gäller bara om du räknar mot samma prov som du gjorde.</p>';
